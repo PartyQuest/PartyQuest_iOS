@@ -35,6 +35,7 @@
 		4A4A4F522B454AE600C99612 /* QuestCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4A4F512B454AE600C99612 /* QuestCardCell.swift */; };
 		4A50A9FF2B0DCFDE0026814F /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A50A9FE2B0DCFDE0026814F /* SignUpResponse.swift */; };
 		4A50AA042B0DF4430026814F /* PasswordKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A50AA032B0DF4430026814F /* PasswordKeychain.swift */; };
+		4A57E8562B5FCADA00B58C8B /* SideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A57E8552B5FCADA00B58C8B /* SideBarViewController.swift */; };
 		4A636B2A2B2AE34C004FEF52 /* TitleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A636B292B2AE34C004FEF52 /* TitleHeaderView.swift */; };
 		4A6A25AF2AF21D33000CA63F /* LogInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6A25AE2AF21D33000CA63F /* LogInCoordinator.swift */; };
 		4A6A25B22AF22FC1000CA63F /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6A25B12AF22FC1000CA63F /* SignUpCoordinator.swift */; };
@@ -150,6 +151,7 @@
 		4A4A4F512B454AE600C99612 /* QuestCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestCardCell.swift; sourceTree = "<group>"; };
 		4A50A9FE2B0DCFDE0026814F /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
 		4A50AA032B0DF4430026814F /* PasswordKeychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordKeychain.swift; sourceTree = "<group>"; };
+		4A57E8552B5FCADA00B58C8B /* SideBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarViewController.swift; sourceTree = "<group>"; };
 		4A636B292B2AE34C004FEF52 /* TitleHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleHeaderView.swift; sourceTree = "<group>"; };
 		4A6A25AE2AF21D33000CA63F /* LogInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInCoordinator.swift; sourceTree = "<group>"; };
 		4A6A25B12AF22FC1000CA63F /* SignUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinator.swift; sourceTree = "<group>"; };
@@ -345,6 +347,7 @@
 				4A4A4F4B2B4529F100C99612 /* PartyDetailViewModel.swift */,
 				4A4A4F4D2B45309B00C99612 /* QuestListViewController.swift */,
 				4A4A4F512B454AE600C99612 /* QuestCardCell.swift */,
+				4A57E8542B5FCAC800B58C8B /* SideBarView */,
 			);
 			path = PartyDetailView;
 			sourceTree = "<group>";
@@ -357,6 +360,14 @@
 				4ADF812D2B0F3C0900A8E027 /* UseCase */,
 			);
 			path = Credential;
+			sourceTree = "<group>";
+		};
+		4A57E8542B5FCAC800B58C8B /* SideBarView */ = {
+			isa = PBXGroup;
+			children = (
+				4A57E8552B5FCADA00B58C8B /* SideBarViewController.swift */,
+			);
+			path = SideBarView;
 			sourceTree = "<group>";
 		};
 		4A6A25C72AF37A12000CA63F /* Network */ = {
@@ -959,6 +970,7 @@
 				AD5B59A72B1F081700D02775 /* NaverUserDataResponse.swift in Sources */,
 				4A4A4F402B429D8C00C99612 /* CollectionReusableButton.swift in Sources */,
 				4AB2F7B62B32D971005D554C /* DoingQuestCell.swift in Sources */,
+				4A57E8562B5FCADA00B58C8B /* SideBarViewController.swift in Sources */,
 				AD1BAD182B31718D00329C53 /* CreatePartyViewModel.swift in Sources */,
 				4ADF812F2B0F3C3700A8E027 /* DefaultServiceTokenUseCase.swift in Sources */,
 				4AB2F7B42B317946005D554C /* CircularProgressView.swift in Sources */,

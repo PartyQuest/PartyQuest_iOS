@@ -10,6 +10,30 @@ import RxSwift
 import RxCocoa
 
 final class PartyDetailViewController: UIViewController {
+    private lazy var sideBarButton: UIButton = {
+        let imageConfig = UIImage.SymbolConfiguration(pointSize: 20, weight: .semibold)
+        let line3Image = UIImage(systemName: "line.3.horizontal", withConfiguration: imageConfig)
+        let button = UIButton()
+        button.setImage(line3Image, for: .normal)
+        button.tintColor = .darkGray
+        
+        return button
+    }()
+    
+    private let sideBarViewController: SideBarViewController = {
+        let viewController = SideBarViewController()
+        
+        return viewController
+    }()
+    
+    private lazy var dimmingView: UIView = {
+        let view = UIView(frame: view.bounds)
+        view.backgroundColor = UIColor.black.withAlphaComponent(0.7)
+        view.isHidden = true
+        
+        return view
+    }()
+    
     private lazy var segmentedControl: UnderlineSegmentedControl = {
         let segmentedControl = UnderlineSegmentedControl(items: ["예정", "진행중", "완료"])
         segmentedControl.setTitleTextAttributes(
@@ -102,20 +126,20 @@ final class PartyDetailViewController: UIViewController {
     }
     
     private func configureNavigationBar() {
-        let imageConfig = UIImage.SymbolConfiguration(pointSize: 20, weight: .semibold)
-        let line3Image = UIImage(systemName: "line.3.horizontal", withConfiguration: imageConfig)
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: line3Image, style: .done, target: nil, action: nil)
-        navigationItem.rightBarButtonItem?.tintColor = .darkGray
+        sideBarButton.addTarget(self, action: #selector(showSideBar), for: .touchUpInside)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: sideBarButton)
     }
     
     private func configureRootView() {
         view.backgroundColor = .systemGray6
     }
     
+    
     private func setSubviews() {
         view.addSubview(segmentedControl)
         view.addSubview(pageViewController.view)
+        
+        setDimmingView()
     }
     
     private func setConstraints() {
@@ -202,5 +226,59 @@ extension PartyDetailViewController: UIPageViewControllerDelegate {
         
         segmentedControl.selectedSegmentIndex = index
         currentPage = index
+    }
+}
+
+// MARK: - SideBar
+extension PartyDetailViewController {
+    private func setDimmingView() {
+        view.addSubview(dimmingView)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dimmingViewDidTap))
+        dimmingView.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc private func dimmingViewDidTap() {
+        let menuWidth = self.view.frame.width * 0.7
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.sideBarViewController.view.frame = CGRect(x: self.view.frame.width,
+                                                      y: 0,
+                                                      width: menuWidth,
+                                                      height: self.view.frame.height)
+            self.dimmingView.alpha = 0
+        }) { _ in
+            self.sideBarViewController.view.removeFromSuperview()
+            self.sideBarViewController.removeFromParent()
+            self.dimmingView.isHidden = true
+            self.sideBarButton.isHidden = false
+        }
+    }
+    
+    @objc
+    private func showSideBar() {
+//        self.addChild(sideBarViewController)
+//        self.view.addSubview(sideBarViewController.view)
+        tabBarController?.addChild(sideBarViewController)
+        tabBarController?.view.addSubview(sideBarViewController.view)
+        
+        let menuWidth = self.view.frame.width * 0.7
+        let menuHeight = self.view.frame.height
+        
+        sideBarViewController.view.frame = CGRect(x: view.frame.width + menuWidth,
+                                                  y: 0,
+                                                  width: menuWidth,
+                                                  height: menuHeight)
+        dimmingView.isHidden = false
+        dimmingView.alpha = 0.7
+        sideBarButton.isHidden = true
+        
+        UIView.animate(withDuration: 0.3) {
+            self.sideBarViewController.view.frame = CGRect(x: self.view.frame.width - menuWidth,
+                                                      y: 0,
+                                                      width: menuWidth,
+                                                      height: menuHeight)
+            
+        }
     }
 }
