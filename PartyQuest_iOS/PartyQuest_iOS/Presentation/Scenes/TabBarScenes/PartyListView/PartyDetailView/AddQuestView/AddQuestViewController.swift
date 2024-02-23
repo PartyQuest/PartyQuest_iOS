@@ -134,7 +134,6 @@ final class AddQuestViewController: UIViewController {
                 content.text = "날짜"
                 content.secondaryTextProperties.color = .systemBlue
                 content.secondaryText = PQDateFormatter.shared.dateToDefaultString(from: date) ?? " "
-//                content.secondaryText = date?.description ?? " "
                 cell.contentConfiguration = content
             }
             
@@ -150,7 +149,6 @@ final class AddQuestViewController: UIViewController {
                 content.text = "시간"
                 content.secondaryTextProperties.color = .systemBlue
                 content.secondaryText = PQDateFormatter.shared.dateToTimeString(from: time) ?? " "
-//                content.secondaryText = time?.description ?? " "
                 cell.contentConfiguration = content
             }
             
@@ -251,6 +249,7 @@ final class AddQuestViewController: UIViewController {
         newDateSectionSnapshot.append([datePickerItem], to: newHeaderItem)
         newDateSectionSnapshot.expand([newHeaderItem])
         
+        viewModel.dateSubject.onNext(date)
         dataSource.apply(newDateSectionSnapshot, to: .date, animatingDifferences: false)
     }
     
@@ -271,6 +270,7 @@ final class AddQuestViewController: UIViewController {
         newTimeSectionSnapshot.append([timePickerItem], to: newHeaderItem)
         newTimeSectionSnapshot.expand([newHeaderItem])
         
+        viewModel.timeSubject.onNext(date)
         dataSource.apply(newTimeSectionSnapshot, to: .time, animatingDifferences: false)
     }
     
@@ -316,6 +316,28 @@ final class AddQuestViewController: UIViewController {
                 owner.collectionView.scrollToItem(at: emitter.at, at: .bottom, animated: true)
             }
             .disposed(by: disposBag)
+        
+        
+        let title = addQuestContentView.titleTextField.rx.text
+            .orEmpty
+            .distinctUntilChanged()
+        let description = addQuestContentView.descriptionTextView.rx.text
+            .orEmpty
+            .distinctUntilChanged()
+        
+        let input = AddQuestViewModel.Input(
+            title: title, description: description
+        )
+        
+        let output = viewModel.transform(input)
+        
+        output.isAddButtonEnable
+            .drive(with: self) { owner, isAddButtonEnable in
+                owner.addQuestTitleView.addButton.isEnabled = isAddButtonEnable
+            }
+            .disposed(by: disposBag)
+        
+        
     }
 }
 
