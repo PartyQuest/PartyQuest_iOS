@@ -25,4 +25,9 @@ final class AddQuestCoordinator: AddQuestCoordinatorType {
         
         navigationController?.present(addQuestViewController, animated: true)
     }
+    
+    func toQuestList() {
+        finish()
+        navigationController?.dismiss(animated: true)
+    }
 }
