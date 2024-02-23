@@ -324,9 +324,12 @@ final class AddQuestViewController: UIViewController {
         let description = addQuestContentView.descriptionTextView.rx.text
             .orEmpty
             .distinctUntilChanged()
+        let addButtonTapped = addQuestTitleView.addButton.rx.tap.asObservable()
         
         let input = AddQuestViewModel.Input(
-            title: title, description: description
+            title: title,
+            description: description,
+            addButtonTapped: addButtonTapped
         )
         
         let output = viewModel.transform(input)
@@ -337,6 +340,9 @@ final class AddQuestViewController: UIViewController {
             }
             .disposed(by: disposBag)
         
+        output.addQuest
+            .subscribe { _ in }
+            .disposed(by: disposBag)
         
     }
 }
