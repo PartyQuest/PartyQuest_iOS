@@ -89,6 +89,7 @@
 		AD1C43E62B93014900D856EC /* FloatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1C43E52B93014900D856EC /* FloatingViewController.swift */; };
 		AD1C43EC2B93067C00D856EC /* ChangeMemberCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1C43EB2B93067C00D856EC /* ChangeMemberCountView.swift */; };
 		AD1C43EE2B931F1A00D856EC /* FloatingViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1C43ED2B931F1A00D856EC /* FloatingViewType.swift */; };
+		AD1C43F02B93256000D856EC /* FloatingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1C43EF2B93256000D856EC /* FloatingViewModel.swift */; };
 		AD2D7A2D2B7DE25400F5A7C0 /* SocialUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2D7A2C2B7DE25400F5A7C0 /* SocialUser.swift */; };
 		AD2D7A2F2B7DE4B400F5A7C0 /* PartyInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2D7A2E2B7DE4B400F5A7C0 /* PartyInformation.swift */; };
 		AD2D7A312B7DE4FD00F5A7C0 /* PartyMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2D7A302B7DE4FD00F5A7C0 /* PartyMember.swift */; };
@@ -236,6 +237,7 @@
 		AD1C43E52B93014900D856EC /* FloatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingViewController.swift; sourceTree = "<group>"; };
 		AD1C43EB2B93067C00D856EC /* ChangeMemberCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeMemberCountView.swift; sourceTree = "<group>"; };
 		AD1C43ED2B931F1A00D856EC /* FloatingViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingViewType.swift; sourceTree = "<group>"; };
+		AD1C43EF2B93256000D856EC /* FloatingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingViewModel.swift; sourceTree = "<group>"; };
 		AD2D7A2C2B7DE25400F5A7C0 /* SocialUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialUser.swift; sourceTree = "<group>"; };
 		AD2D7A2E2B7DE4B400F5A7C0 /* PartyInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyInformation.swift; sourceTree = "<group>"; };
 		AD2D7A302B7DE4FD00F5A7C0 /* PartyMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyMember.swift; sourceTree = "<group>"; };
@@ -569,6 +571,7 @@
 			children = (
 				AD1C43E72B93019900D856EC /* Subviews */,
 				AD1C43E52B93014900D856EC /* FloatingViewController.swift */,
+				AD1C43EF2B93256000D856EC /* FloatingViewModel.swift */,
 			);
 			path = FloatingViews;
 			sourceTree = "<group>";
@@ -1100,6 +1103,7 @@
 				AD5AC12A2B5F882900AA4E49 /* PartyInfoViewModel.swift in Sources */,
 				4A50AA042B0DF4430026814F /* PasswordKeychain.swift in Sources */,
 				AD5DAB9E2AEBD36600DC30B9 /* TitledTextField.swift in Sources */,
+				AD1C43F02B93256000D856EC /* FloatingViewModel.swift in Sources */,
 				4A6A25B42AF2303F000CA63F /* SignUpViewModel.swift in Sources */,
 				AD59A9852B284695005BAEEB /* PartyListViewController.swift in Sources */,
 				AD59A98D2B284AC1005BAEEB /* Reusable.swift in Sources */,
