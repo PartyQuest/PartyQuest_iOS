@@ -9,7 +9,9 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-final class ChangeMemberCountView: UIView {
+final class ChangeMemberCountView: UIView, FloatingViewType {
+    typealias Value = String
+    
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "최대인원 변경하기"
@@ -111,10 +113,15 @@ final class ChangeMemberCountView: UIView {
         return stackView
     }()
     
+    let changedValue: PublishRelay<Value> = .init()
+    
+    private var disposeBag: DisposeBag = .init()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setSubviews()
         setConstraints()
+        setBindings()
     }
     
     required init?(coder: NSCoder) {
@@ -150,8 +157,11 @@ final class ChangeMemberCountView: UIView {
             outterStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
         ])
     }
-}
-
-extension ChangeMemberCountView {
     
+    private func setBindings() {
+        countSlider.rx.value
+            .map { String($0) }
+            .bind(to: changedValue)
+            .disposed(by: disposeBag)
+    }
 }

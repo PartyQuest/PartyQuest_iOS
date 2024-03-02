@@ -88,6 +88,7 @@
 		AD1BAD222B32B54000329C53 /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1BAD212B32B54000329C53 /* DropDownCell.swift */; };
 		AD1C43E62B93014900D856EC /* FloatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1C43E52B93014900D856EC /* FloatingViewController.swift */; };
 		AD1C43EC2B93067C00D856EC /* ChangeMemberCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1C43EB2B93067C00D856EC /* ChangeMemberCountView.swift */; };
+		AD1C43EE2B931F1A00D856EC /* FloatingViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1C43ED2B931F1A00D856EC /* FloatingViewType.swift */; };
 		AD2D7A2D2B7DE25400F5A7C0 /* SocialUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2D7A2C2B7DE25400F5A7C0 /* SocialUser.swift */; };
 		AD2D7A2F2B7DE4B400F5A7C0 /* PartyInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2D7A2E2B7DE4B400F5A7C0 /* PartyInformation.swift */; };
 		AD2D7A312B7DE4FD00F5A7C0 /* PartyMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2D7A302B7DE4FD00F5A7C0 /* PartyMember.swift */; };
@@ -234,6 +235,7 @@
 		AD1BAD212B32B54000329C53 /* DropDownCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownCell.swift; sourceTree = "<group>"; };
 		AD1C43E52B93014900D856EC /* FloatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingViewController.swift; sourceTree = "<group>"; };
 		AD1C43EB2B93067C00D856EC /* ChangeMemberCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeMemberCountView.swift; sourceTree = "<group>"; };
+		AD1C43ED2B931F1A00D856EC /* FloatingViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingViewType.swift; sourceTree = "<group>"; };
 		AD2D7A2C2B7DE25400F5A7C0 /* SocialUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialUser.swift; sourceTree = "<group>"; };
 		AD2D7A2E2B7DE4B400F5A7C0 /* PartyInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyInformation.swift; sourceTree = "<group>"; };
 		AD2D7A302B7DE4FD00F5A7C0 /* PartyMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyMember.swift; sourceTree = "<group>"; };
@@ -574,6 +576,7 @@
 		AD1C43E72B93019900D856EC /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
+				AD1C43ED2B931F1A00D856EC /* FloatingViewType.swift */,
 				AD1C43EB2B93067C00D856EC /* ChangeMemberCountView.swift */,
 			);
 			path = Subviews;
@@ -1072,6 +1075,7 @@
 				4AE4FEE72B624C9B00891134 /* AddQuestCoordinator.swift in Sources */,
 				AD1BAD1A2B31759800329C53 /* TitledTextView.swift in Sources */,
 				AD5DABC62AF4D4EE00DC30B9 /* PQAuthManagerProvider.swift in Sources */,
+				AD1C43EE2B931F1A00D856EC /* FloatingViewType.swift in Sources */,
 				4A1F24682AEA8628005B264F /* WelcomeViewController.swift in Sources */,
 				4A1F24982AEBE2A6005B264F /* WelcomeCoordinator.swift in Sources */,
 				AD5AC10A2B566F2F00AA4E49 /* DataConvertibleType.swift in Sources */,
