@@ -379,6 +379,7 @@
 				ADCBA2562B4285F200A56097 /* PartySearchView */,
 				AD5AC1252B5F87A800AA4E49 /* PartyInfoView */,
 				ADCBA2792B45267600A56097 /* PushNotificationView */,
+				AD1C43F12B93263700D856EC /* ValueModifyView */,
 			);
 			path = TabBarScenes;
 			sourceTree = "<group>";
@@ -569,20 +570,19 @@
 		AD1C43E42B93010100D856EC /* FloatingViews */ = {
 			isa = PBXGroup;
 			children = (
-				AD1C43E72B93019900D856EC /* Subviews */,
-				AD1C43E52B93014900D856EC /* FloatingViewController.swift */,
-				AD1C43EF2B93256000D856EC /* FloatingViewModel.swift */,
+				AD1C43ED2B931F1A00D856EC /* FloatingViewType.swift */,
+				AD1C43EB2B93067C00D856EC /* ChangeMemberCountView.swift */,
 			);
 			path = FloatingViews;
 			sourceTree = "<group>";
 		};
-		AD1C43E72B93019900D856EC /* Subviews */ = {
+		AD1C43F12B93263700D856EC /* ValueModifyView */ = {
 			isa = PBXGroup;
 			children = (
-				AD1C43ED2B931F1A00D856EC /* FloatingViewType.swift */,
-				AD1C43EB2B93067C00D856EC /* ChangeMemberCountView.swift */,
+				AD1C43E52B93014900D856EC /* FloatingViewController.swift */,
+				AD1C43EF2B93256000D856EC /* FloatingViewModel.swift */,
 			);
-			path = Subviews;
+			path = ValueModifyView;
 			sourceTree = "<group>";
 		};
 		AD1FA9FF2B56576C006516CF /* DTO */ = {

@@ -11,7 +11,6 @@ import RxCocoa
 
 final class FloatingViewController<FloatingView: FloatingViewType>: UIViewController {
     private let floatingView: FloatingView
-    
     private let floatingViewWidthRatio: CGFloat
     private let floatingViewHeightRatio: CGFloat
     
@@ -49,5 +48,9 @@ final class FloatingViewController<FloatingView: FloatingViewType>: UIViewContro
             floatingView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             floatingView.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor),
         ])
+    }
+    
+    private func setBindings() {
+        
     }
 }
