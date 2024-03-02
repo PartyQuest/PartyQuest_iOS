@@ -115,6 +115,8 @@ final class ChangeMemberCountView: UIView, FloatingViewType {
     
     let changedValue: PublishRelay<Value> = .init()
     
+    var adjustButtonTapped: Driver<Void> { adjustButton.rx.tap.asDriver() }
+    
     private var disposeBag: DisposeBag = .init()
     
     override init(frame: CGRect) {

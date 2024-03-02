@@ -13,4 +13,6 @@ protocol FloatingViewType: UIView {
     associatedtype Value
     
     var changedValue: PublishRelay<Value> { get }
+    
+    var adjustButtonTapped: Driver<Void> { get }
 }
